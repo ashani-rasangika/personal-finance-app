@@ -33,7 +33,7 @@ export default function Navbar() {
           <Link href="/budget" className="block py-2 md:py-0 hover:text-blue-300">
             Budget
           </Link>
-          <Link href="/transactions" className="block py-2 md:py-0 hover:text-blue-300">
+          <Link href="/expenses" className="block py-2 md:py-0 hover:text-blue-300">
             Transactions
           </Link>
           <Link href="/about-us" className="block py-2 md:py-0 hover:text-blue-300">
