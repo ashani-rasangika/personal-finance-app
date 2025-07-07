@@ -35,7 +35,7 @@ export default function ExpensesPage() {
             <div className="flex gap-3">
               <Link
                 href={`/expenses/edit/${exp.id}`}
-                className="px-4 py-2 bg-yellow-400 text-black rounded-lg hover:bg-yellow-500 transition duration-200"
+                className="px-4 py-2 bg-blue-400 text-black rounded-lg hover:bg-blue-500 transition duration-200"
               >
                 Edit
               </Link>
