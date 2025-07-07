@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <main className="bg-custom min-h-screen text-gray-800">
+    <main className="min-h-screen text-gray-800">
       {/* Hero Section */}
       <section className="relative w-full h-[300px] md:h-[400px] overflow-hidden">
         <Image
