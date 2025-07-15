@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function WelcomeSection() {
   return (
     <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/welcomeimg.jpg" // 🖼️ 
+        src="/images/welcomeimg.jpg" // 🖼️
         alt="Welcome background"
         fill
         className="object-cover opacity-80"
@@ -20,7 +20,8 @@ export default function WelcomeSection() {
             Welcome to FinGuard
           </h2>
           <p className="text-lg md:text-xl font-light">
-            Take control of your money, track your expenses, and build your future — all in one place.
+            Take control of your money, track your expenses, and build your
+            future — all in one place.
           </p>
         </div>
       </div>
