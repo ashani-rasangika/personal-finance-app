@@ -30,54 +30,70 @@ export default function EditExpensePage() {
   const handleSubmit = e => {
     e.preventDefault();
     console.log('Updated expense:', form);
-    // TODO: send to backend
     router.push('/expenses');
   };
 
   return (
-    <main className="max-w-xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-6">Edit Expense #{id}</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          name="amount"
-          type="number"
-          placeholder="Amount"
-          value={form.amount}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          required
-        />
-        <input
-          name="date"
-          type="date"
-          value={form.date}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          required
-        />
-        <input
-          name="category"
-          type="text"
-          placeholder="Category"
-          value={form.category}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-          required
-        />
-        <textarea
-          name="notes"
-          placeholder="Notes"
-          value={form.notes}
-          onChange={handleChange}
-          className="w-full p-2 border rounded"
-        ></textarea>
-        <button
-          type="submit"
-          className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-        >
-          Update
-        </button>
-      </form>
+    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100 p-4">
+      <div className="w-full max-w-lg bg-white shadow-2xl rounded-2xl p-8">
+        <h1 className="text-3xl font-bold text-center mb-6 text-green-700">
+          Edit Expense #{id}
+        </h1>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div>
+            <label className="block mb-1 text-gray-600">Amount</label>
+            <input
+              name="amount"
+              type="number"
+              placeholder="Amount"
+              value={form.amount}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+              required
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-gray-600">Date</label>
+            <input
+              name="date"
+              type="date"
+              value={form.date}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+              required
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-gray-600">Category</label>
+            <input
+              name="category"
+              type="text"
+              placeholder="Category"
+              value={form.category}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+              required
+            />
+          </div>
+          <div>
+            <label className="block mb-1 text-gray-600">Notes</label>
+            <textarea
+              name="notes"
+              placeholder="Notes"
+              value={form.notes}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+              rows={3}
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition"
+          >
+            Update Expense
+          </button>
+        </form>
+      </div>
     </main>
   );
 }
