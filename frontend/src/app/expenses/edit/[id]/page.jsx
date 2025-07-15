@@ -34,9 +34,9 @@ export default function EditExpensePage() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-green-100 p-4">
+    <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 p-4">
       <div className="w-full max-w-lg bg-white shadow-2xl rounded-2xl p-8">
-        <h1 className="text-3xl font-bold text-center mb-6 text-green-700">
+        <h1 className="text-3xl font-bold text-center mb-6 text-blue-700">
           Edit Expense #{id}
         </h1>
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -48,7 +48,7 @@ export default function EditExpensePage() {
               placeholder="Amount"
               value={form.amount}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
               required
             />
           </div>
@@ -59,7 +59,7 @@ export default function EditExpensePage() {
               type="date"
               value={form.date}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
               required
             />
           </div>
@@ -71,7 +71,7 @@ export default function EditExpensePage() {
               placeholder="Category"
               value={form.category}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
               required
             />
           </div>
@@ -82,13 +82,13 @@ export default function EditExpensePage() {
               placeholder="Notes"
               value={form.notes}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 transition"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
               rows={3}
             ></textarea>
           </div>
           <button
             type="submit"
-            className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition"
+            className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
           >
             Update Expense
           </button>
