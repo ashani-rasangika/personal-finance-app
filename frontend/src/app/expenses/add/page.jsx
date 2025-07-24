@@ -1,36 +1,35 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function AddExpensePage() {
   const router = useRouter();
   const [form, setForm] = useState({
-    amount: '',
-    date: '',
-    category: '',
-    notes: '',
+    amount: "",
+    date: "",
+    category: "",
+    notes: "",
   });
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Expense submitted:', form);
-    router.push('/expenses');
+    console.log("Expense submitted:", form);
+    router.push("/expenses");
   };
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 p-6">
       <div className="w-full max-w-xl bg-white shadow-2xl rounded-3xl p-10 transition-transform duration-300 hover:scale-[1.02]">
-        
         {/* IMAGE on top */}
         <div className="flex justify-center mb-6">
-          <img 
-            src="/images/welcomeimg2.jpg" 
-            alt="Expense" 
+          <img
+            src="/images/welcomeimg2.jpg"
+            alt="Expense"
             className="w-24 h-24 object-cover rounded-full shadow-md"
           />
         </div>
