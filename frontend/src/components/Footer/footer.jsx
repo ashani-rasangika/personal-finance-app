@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -11,11 +12,16 @@ const Footer = () => {
               Finguard
             </h2>
             <ul className="font-medium">
-              {["About Us", "Our Mission", "Team", "Blog"].map((item) => (
-                <li className="mb-4" key={item}>
-                  <a href="#" className="hover:underline">
-                    {item}
-                  </a>
+              {[
+                { name: "About Us", href: "/about" },
+                { name: "Our Mission", href: "/mission" },
+                { name: "Team", href: "/team" },
+                { name: "Blog", href: "/blog" },
+              ].map((item) => (
+                <li className="mb-4" key={item.name}>
+                  <Link href={item.href} className="hover:underline">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -27,11 +33,16 @@ const Footer = () => {
               Resources
             </h2>
             <ul className="font-medium">
-              {["Expense Tracker", "Budget Templates", "Investment Tips", "Help Center"].map((item) => (
-                <li className="mb-4" key={item}>
-                  <a href="#" className="hover:underline">
-                    {item}
-                  </a>
+              {[
+                { name: "Expense Tracker", href: "/tracker" },
+                { name: "Budget Templates", href: "/budget-templates" },
+                { name: "Investment Tips", href: "/investment-tips" },
+                { name: "Help Center", href: "/help" },
+              ].map((item) => (
+                <li className="mb-4" key={item.name}>
+                  <Link href={item.href} className="hover:underline">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -43,11 +54,15 @@ const Footer = () => {
               Legal
             </h2>
             <ul className="font-medium">
-              {["Privacy Policy", "Security", "Terms of Service"].map((item) => (
-                <li className="mb-4" key={item}>
-                  <a href="#" className="hover:underline">
-                    {item}
-                  </a>
+              {[
+                { name: "Privacy Policy", href: "/privacy-policy" },
+                { name: "Security", href: "/security" },
+                { name: "Terms of Service", href: "/terms" },
+              ].map((item) => (
+                <li className="mb-4" key={item.name}>
+                  <Link href={item.href} className="hover:underline">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -59,11 +74,16 @@ const Footer = () => {
               Connect
             </h2>
             <ul className="font-medium">
-              {["Contact Support", "Community Forum", "Newsletter", "Feedback"].map((item) => (
-                <li className="mb-4" key={item}>
-                  <a href="#" className="hover:underline">
-                    {item}
-                  </a>
+              {[
+                { name: "Contact Support", href: "/contact" },
+                { name: "Community Forum", href: "/forum" },
+                { name: "Newsletter", href: "/newsletter" },
+                { name: "Feedback", href: "/feedback" },
+              ].map((item) => (
+                <li className="mb-4" key={item.name}>
+                  <Link href={item.href} className="hover:underline">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -74,22 +94,40 @@ const Footer = () => {
         <div className="px-4 py-6 bg-gray-100 dark:bg-gray-800 md:flex md:items-center md:justify-between">
           <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
             © 2025{" "}
-            <a href="#" className="hover:underline">
+            <Link href="/" className="hover:underline">
               Finguard™
-            </a>
+            </Link>
             . Empowering your financial freedom.
           </span>
 
           <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
             {[
-              { label: "LinkedIn", svgPath: "M16 8a6 6 0 11-12 0..." },
-              { label: "Facebook", svgPath: "M6.135 3H8V0H6.135..." },
-              { label: "Twitter", svgPath: "M20 1.892a8.178 8.178..." },
-              { label: "GitHub", svgPath: "M10 .333A9.911 9.911..." },
-            ].map(({ label, svgPath }, index) => (
+              {
+                label: "LinkedIn",
+                href: "https://linkedin.com",
+                svgPath: "M16 8a6 6 0 11-12 0...", // Replace with actual path
+              },
+              {
+                label: "Facebook",
+                href: "https://facebook.com",
+                svgPath: "M6.135 3H8V0H6.135...", // Replace with actual path
+              },
+              {
+                label: "Twitter",
+                href: "https://twitter.com",
+                svgPath: "M20 1.892a8.178 8.178...", // Replace with actual path
+              },
+              {
+                label: "GitHub",
+                href: "https://github.com",
+                svgPath: "M10 .333A9.911 9.911...", // Replace with actual path
+              },
+            ].map(({ label, href, svgPath }, index) => (
               <a
                 key={index}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
               >
                 <svg
