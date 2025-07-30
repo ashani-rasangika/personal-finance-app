@@ -44,7 +44,7 @@ export default function AboutPage() {
             {
               name: "Ashani Dewmini",
               role: "Founder & Developer",
-              img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
+              img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
             },
             {
               name: "John Smith",
@@ -52,9 +52,9 @@ export default function AboutPage() {
               img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
             },
             {
-              name: "Emily Johnson",
+              name: "Emil Johnson",
               role: "Marketing Specialist",
-              img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+              img: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=400&q=80",
             },
           ].map((member, idx) => (
             <div
